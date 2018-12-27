@@ -1,6 +1,6 @@
 import telebot
 from telebot import types
-TOKEN = 'TOKEN'
+TOKEN = '733447764:AAHvEMWPaumZ-lXlkiwyhAb6ttYHvVcZpSs'
 bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start'])
@@ -16,8 +16,8 @@ def help_message(message):
 
 @bot.message_handler(commands=['documento'])
 def send_pdf(message):
-doc = open('/home/cristian/BOOOOT/users.txt', 'rb')
-bot.send_document(message.chat.id, doc)
-doc.close()
+    doc = open('/home/cristian/Downloads/document.pdf', 'rb')
+    bot.send_document(message.chat.id, doc)
+    doc.close()
 
 bot.polling()

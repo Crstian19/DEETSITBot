@@ -14,9 +14,34 @@ def help_message(message):
     msg = "Actualmente estos son los comandos disponibles para usar este bot /start /help /curso"
     bot.send_message(message.chat.id, msg)
 
-@bot.message_handler(commands=['documento'])
+@bot.message_handler(commands=['calendario'])
 def send_pdf(message):
-    doc = open('/home/cristian/Downloads/document.pdf', 'rb')
+    doc = open('/home/cristian/Downloads/Calendario.pdf', 'rb')
+    bot.send_document(message.chat.id, doc)
+    doc.close()
+@bot.message_handler(commands=['apuntes'])
+def gen_markup(message):
+    markup = types.ReplyKeyboardMarkup(row_width=2)
+    itembtn1 = types.KeyboardButton('Primero')
+    itembtn2 = types.KeyboardButton('Segundo')
+    itembtn3 = types.KeyboardButton('Tercero (GIT)')
+    itembtn4 = types.KeyboardButton('Cuarto (GIT)')
+    markup.add(itembtn1, itembtn2, itembtn3, itembtn4)
+    bot.send_message(message.chat.id, "Elige un curso:", reply_markup=markup)
+
+@bot.message_handler(func=lambda message: message.text== 'Primero')
+def curso_primero(message):
+    subject_markup = types.ReplyKeyboardMarkup(row_width=2)
+    itembtn1 = types.KeyboardButton('Cálculo 1')
+    itembtn2 = types.KeyboardButton('Física')
+    itembtn3 = types.KeyboardButton('Álgebra')
+    itembtn4 = types.KeyboardButton('F.Programación')
+    subject_markup.add(itembtn1, itembtn2, itembtn3, itembtn4)
+    bot.send_message(message.chat.id, "Elige una asignatura:", reply_markup=subject_markup)
+
+@bot.message_handler(func=lambda message: message.text== 'Cálculo 1')
+def send_pdf(message):
+    doc = open('/home/cristian/Downloads/Calendario.pdf', 'rb')
     bot.send_document(message.chat.id, doc)
     doc.close()
 

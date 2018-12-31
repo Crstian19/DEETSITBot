@@ -3,3 +3,9 @@ help - Comando de ayuda sobre el bot
 apuntes - Menú por cursos y asignaturas de la comisión de apuntes
 calendario - Calendario académico
 examenes - Calendario de exámenes
+
+
+/setdescription
+
+Bot de la Delegación de Estudiantes de Teleco de la UPCT. Desarrollado 
+por Cristian Gutiérrez @Crstian19 (https://github.com/Crstian19)

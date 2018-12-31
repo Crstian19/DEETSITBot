@@ -1,6 +1,6 @@
 import telebot
 from telebot import types
-TOKEN = 'BOT TOKEN'
+TOKEN = '733447764:AAHvEMWPaumZ-lXlkiwyhAb6ttYHvVcZpSs'
 bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start'])
@@ -16,9 +16,8 @@ def help_message(message):
 
 @bot.message_handler(commands=['calendario'])
 def calendar(message):
-    doc = open('/home/cristian/Downloads/Calendario.pdf', 'rb')
-    bot.send_document(message.chat.id, doc)
-    doc.close()
+    msg = "http://teleco.upct.es/wp-content/uploads/2018/07/calendarioacademico1819.pdf"
+    bot.send_message(message.chat.id, msg)
 
 @bot.message_handler(commands=['examenes'])
 def exams(message):

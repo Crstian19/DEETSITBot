@@ -1,0 +1,5 @@
+start - Iniciar el bot
+help - Comando de ayuda sobre el bot
+apuntes - Menú por cursos y asignaturas de la comisión de apuntes
+calendario - Calendario académico
+examenes - Calendario de exámenes

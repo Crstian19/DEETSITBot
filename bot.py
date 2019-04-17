@@ -73,25 +73,35 @@ def programacion(message):
     msg = "Próximamente..."
     bot.send_message(message.chat.id, msg)
 
-@bot.message_handler(func=lambda message: message.text== 'Física')
-def fisica(message):
+@bot.message_handler(func=lambda message: message.text== 'F.Computadores')
+def computadores(message):
     msg = "Próximamente..."
     bot.send_message(message.chat.id, msg)
 
-@bot.message_handler(func=lambda message: message.text== 'Física')
-def fisica(message):
+@bot.message_handler(func=lambda message: message.text== 'Gestión de empresas')
+def empresas(message):
     msg = "Próximamente..."
     bot.send_message(message.chat.id, msg)
 
-@bot.message_handler(func=lambda message: message.text== 'Física')
-def fisica(message):
+@bot.message_handler(func=lambda message: message.text== 'Cálculo 2')
+def calculo2(message):
     msg = "Próximamente..."
     bot.send_message(message.chat.id, msg)
 
-@bot.message_handler(func=lambda message: message.text== 'Física')
-def fisica(message):
+@bot.message_handler(func=lambda message: message.text== 'Sistemas y Circuitos')
+def circuitos(message):
     msg = "Próximamente..."
     bot.send_message(message.chat.id, msg)
+
+@bot.message_handler(func=lambda message: message.text== 'Estadística')
+def estadistica(message):
+    msg = "Próximamente..."
+    bot.send_message(message.chat.id, msg)
+
+@bot.message_handler(func=lambda message: message.text== 'F.Telemática')
+def telematica(message):
+    msg = "Próximamente..."
+    bot.send_message(message.chat.id, msg)    
 
 @bot.message_handler(func=lambda message: message.text== 'Segundo')
 def curso_segundo(message):
